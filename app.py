@@ -20,7 +20,7 @@ app = Flask(__name__)
 def hello_name(name):
    return 'You have asked for %s. We have no data.' % name
 
-@app.route('')
+@app.route('/')
 def homepage():
    return '<html><head><title>title</title></head><body>Home page strat.run</body></html>'
  
