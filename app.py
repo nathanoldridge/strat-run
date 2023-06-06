@@ -1,3 +1,8 @@
+__author__ = "Nathan Oldridge aka ChemistNate"
+__version__ = 0.1
+__description__ = "A replacement for RunStrat.com"
+__website__ = "www.strat.run"
+
 import os
 
 ''' READING THE DATA FILE 
