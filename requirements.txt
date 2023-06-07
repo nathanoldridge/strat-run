@@ -24,7 +24,7 @@ requests==2.31.0
 six==1.16.0
 soupsieve==2.4.1
 tzdata==2023.3
-urllib3==2.0.2
+urllib3==2.0.3
 webencodings==0.5.1
 Werkzeug==2.3.4
-yfinance==0.2.18
+yfinance==0.2.20
