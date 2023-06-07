@@ -21,7 +21,7 @@ print("App has started.")
 from flask import Flask
 app = Flask(__name__)
  
-@app.route('/ticker/<name>')
+@app.route('/ticker/<tickerSymbol>')
 def hello_name(tickerSymbol):
     import yfinance as yf
     import getStrats
