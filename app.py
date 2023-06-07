@@ -22,8 +22,14 @@ from flask import Flask
 app = Flask(__name__)
  
 @app.route('/ticker/<name>')
-def hello_name(name):
-   return 'You have asked for %s. We have no data.' % name
+def hello_name(tickerSymbol):
+    import yfinance as yf
+    import getStrats
+    hist = yf.Ticker(str(tickerSymbol).upper()).history(period="2y", interval="1d")
+    del hist['Volume']
+    del hist['Dividends']
+    del hist['Stock Splits']
+    return '<html><body>You have asked for ' + tickerSymbol + '<br />' + getStrats.getDailyStrats(hist) + '</body></html>'
 
 @app.route('/')
 def homepage():
