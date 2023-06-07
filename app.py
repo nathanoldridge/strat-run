@@ -29,7 +29,7 @@ def hello_name(tickerSymbol):
     del hist['Volume']
     del hist['Dividends']
     del hist['Stock Splits']
-    return '<html><body>You have asked for ' + tickerSymbol + '<br />' + getStrats.getDailyStrats(hist) + '</body></html>'
+    return '<html><body>You have asked for ' + tickerSymbol + '<br />DAILY:' + getStrats.getDailyStrats(hist) + '<br />WEEKLY:' + getStrats.getWeeklyStrats(hist) + '</body></html>'
 
 @app.route('/')
 def homepage():
