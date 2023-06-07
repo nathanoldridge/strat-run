@@ -5,15 +5,15 @@ __website__ = "www.strat.run"
 
 import os
 
-''' READING THE DATA FILE 
+''' READING THE DATA FILE '''
 # Current directory for Flask app
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 # Current directory for Flask app + file name
 # Use this file_path variable in your code to refer to your file 
 file_path = os.path.join(APP_ROOT, 'data.csv')
-print("Accessing: ", file_path)
-print("never actuall read it.")
-'''
+print("File Path String: ", file_path)
+print("Is that right?")
+
 
 PORT = os.environ["PORT"]
 print("App has started.")
