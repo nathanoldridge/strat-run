@@ -18,8 +18,7 @@ def getDailyStrats(hist):
         current_day_strat = "2u"
     else:
         current_day_strat = "2d"
-    print(tickersymbol, "DAILY is a", current_day_strat, "today")
-
+    
     previous_day_strat = None
     if previous_day_high <= two_days_ago_high and previous_day_low >= two_days_ago_low:
         previous_day_strat = "1"
@@ -29,8 +28,7 @@ def getDailyStrats(hist):
         previous_day_strat = "2u"
     else:
         previous_day_strat = "2d"
-    print(tickersymbol, "DAILY was a", previous_day_strat, "yesterday")
-
+    
     return previous_day_strat + "-" + current_day_strat
 
 
@@ -93,8 +91,7 @@ def getWeeklyStrats(hist):
         current_week_strat = "2u"
     else:
         current_week_strat = "2d"
-    print(tickersymbol, "WEEKLY is a", current_week_strat, "as of today")
-
+    
     previous_week_strat = None
     if previous_week_high <= two_weeks_ago_high and previous_week_low >= two_weeks_ago_low:
         previous_week_strat = "1"
@@ -104,7 +101,6 @@ def getWeeklyStrats(hist):
         previous_week_strat = "2u"
     else:
         previous_week_strat = "2d"
-    print(tickersymbol, "WEEKLY was a", previous_week_strat, "as of last week")
     
     return previous_week_strat + "-" + current_week_strat
 
