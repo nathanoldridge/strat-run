@@ -15,7 +15,7 @@ print("File Path String: ", file_path)
 print("Is that right?")
 
 
-#PORT = os.environ["PORT"]
+PORT = os.environ["PORT"]
 print("App has started.")
 #import yfinance
 from flask import Flask, render_template
@@ -41,8 +41,8 @@ def homepage():
    return render_template('index.html')
  
 if __name__ == '__main__':
-    #app.run(host='0.0.0.0', port=PORT) # use_reloader=True,  USE THIS FOR PROD
-    app.run(host='127.0.0.1') # USE THIS FOR DEV
+    app.run(host='0.0.0.0', port=PORT) # use_reloader=True,  USE THIS FOR PROD
+    #app.run(host='127.0.0.1') # USE THIS FOR DEV
     
     
     
