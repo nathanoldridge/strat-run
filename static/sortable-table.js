@@ -165,3 +165,32 @@ window.addEventListener('load', function () {
     new SortableTable(sortableTables[i]);
   }
 });
+
+// This function makes the table SEARCHABLE
+// ALL cells are checked for a text match
+function searchTable() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+      tdArray = tr[i].getElementsByTagName("td");
+      var foundInRow = false;
+      for (j = 0; j < tdArray.length; j++) {
+          if (tdArray[j]) {
+              txtValue = tdArray[j].textContent || tdArray[j].innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                  //tr[i].style.display = "";
+                  foundInRow = true;
+              }
+          }
+          //else {tr[i].style.display = "none";}
+      }
+      if (foundInRow) {
+          tr[i].style.display = "";
+      } else {
+          tr[i].style.display = "none";
+      }
+  }
+}
