@@ -44,7 +44,5 @@ if __name__ == '__main__':
     app.run(host='0.0.0.0', port=PORT) # use_reloader=True,  USE THIS FOR PROD
     #app.run(host='127.0.0.1') # USE THIS FOR DEV
     
-    
-    
 #print("App now shutting down.")
 

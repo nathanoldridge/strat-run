@@ -3,6 +3,11 @@
     top: -30em;
   }
   
+  table.sortable thead {
+    position:relative;
+    z-index: 1;
+  }
+
   table.sortable td,
   table.sortable th {
     padding: 0.125em 0.25em;
@@ -15,10 +20,15 @@
     position: relative;
   }
   
+  /* Without this class being applied to
+  at least ONE of the <th> elements, the
+  thead and the first row of <tbody> will
+  overlap. I have no idea why. */
   table.sortable th.no-sort {
     padding-top: 0.35em;
   }
   
+  /* Makes 5th column extra wide */
   table.sortable th:nth-child(5) {
     width: 10em;
   }

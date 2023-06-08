@@ -193,4 +193,5 @@ function searchTable() {
           tr[i].style.display = "none";
       }
   }
+  tr[0].style.display = ""; // Ensures header row stays
 }
